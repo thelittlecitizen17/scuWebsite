@@ -1,0 +1,44 @@
+body{
+    background-color:lightslategrey;
+}
+.card1{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 70px;
+    border-radius: 20px 20px 20px 20px;
+}
+.card2{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 70px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+.card3{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 70px;
+    border-radius: 20px 20px 20px 20px;
+
+}
+.card4{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 20px 20px 20px 20px;
+}
+.card5{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 20px 20px 20px 20px;
+}
+.card6{
+    background-color: white;
+    margin-right: 40px;
+    margin-top: 40px;
+    border-radius: 20px 20px 20px 20px;
+}
+.collapse{
+    float: right;
+}
