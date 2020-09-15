@@ -7,7 +7,7 @@ var flute = {
        "id":1,
        "name":"נשיפה"
     },
-    "name":"חליל",
+    "name":"flute",
     "price":50,
     "typeId":1
  };
@@ -21,7 +21,7 @@ var flute = {
        "id":1,
        "name":"נשיפה"
     },
-    "name":"קלרינט",
+    "name":"clarinet",
     "price":50,
     "typeId":1
  };
@@ -34,7 +34,7 @@ var flute = {
        "id":1,
        "name":"נשיפה"
     },
-    "name":"מפוחית",
+    "name":"harmonica",
     "price":50,
     "typeId":1
  };
@@ -47,7 +47,7 @@ var flute = {
        "id":1,
        "name":"נשיפה"
     },
-    "name":"טרומבון",
+    "name":"trombone",
     "price":50,
     "typeId":1
  };
@@ -60,7 +60,7 @@ var flute = {
        "id":1,
        "name":"נשיפה"
     },
-    "name":"חצוצרה",
+    "name":"trumpet",
     "price":50,
     "typeId":1
  };
@@ -73,7 +73,7 @@ var flute = {
        "id":2,
        "name":"נגינה"
     },
-    "name":"כינור",
+    "name":"violin",
     "price":50,
     "typeId":1
  };
@@ -123,6 +123,9 @@ var card6 = '<img src='+trombone.imagePath+' class="card-img-top" alt="..." widt
   '<a href="#" class="btn btn-primary">הוספה לעגלה</a>'+
 '</div>';
 
+var cards = [card1,card2,card3,card4,card5,card6];
+
+
 
 document.getElementById("card1").innerHTML=card1;
 document.getElementById("card2").innerHTML=card2;
@@ -130,3 +133,45 @@ document.getElementById("card3").innerHTML=card3;
 document.getElementById("card4").innerHTML=card4;
 document.getElementById("card5").innerHTML=card5;
 document.getElementById("card6").innerHTML=card6;
+
+var c1 = document.getElementById("card1");
+var c2 = document.getElementById("card2");
+var c3 = document.getElementById("card3");
+var c4 = document.getElementById("card4");
+var c5 = document.getElementById("card5");
+var c6 = document.getElementById("card6");
+
+var cardsObject = [c1,c2,c3,c4,c5,c6];
+
+var b;
+
+function showAll()
+{
+   for(i=0;i<cardsObject.length;i++)
+   {
+      cardsObject[i].style.display='block';
+   }
+}
+
+function search(clicked_id)
+{
+   b = musicalInstruments.find(x=>x.name===clicked_id);
+
+    for(i=0;i<cards.length;i++)
+    {
+      var c = cards[i].search(b.name);
+      if(c===-1)
+      {
+         cardsObject[i].style.display='none';
+  
+      }
+      else
+      {
+         cardsObject[i].style.display='block';
+      }
+      console.log(c);
+    }
+
+}
+
+
